@@ -25,6 +25,7 @@ COINS = {
 
 
 def fetch_coin(coin_id: str, symbol: str) -> pd.DataFrame:
+    """Download one coin and return one daily row per date."""
     url = f"{BASE_URL}/coins/{coin_id}/market_chart/range"
     params = {
         "vs_currency": "usd",
